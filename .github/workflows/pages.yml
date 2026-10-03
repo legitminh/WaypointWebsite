@@ -30,8 +30,8 @@ jobs:
       - name: Assemble site
         run: |
           mkdir -p _site/assets
-          cp index.html styles.css releases.js .nojekyll _site/
-          cp assets/favicon.png assets/icon.png _site/assets/
+          cp index.html styles.css releases.js cursor.js .nojekyll _site/
+          cp assets/* _site/assets/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

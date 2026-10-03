@@ -3,164 +3,168 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Waypoint — Navigate school. Lock in.</title>
+    <title>Waypoint — Big goals. Small missions.</title>
     <meta
       name="description"
-      content="Waypoint is a desktop study coach. Ask for an explanation, a quiz, or a plan, then lock in on the work in front of you."
+      content="Waypoint is a desktop study copilot. Sign in with Google, talk through the next step, then launch a short mission on one task."
     />
     <link rel="icon" href="assets/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="assets/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="releases.js" defer></script>
+    <script src="cursor.js" defer></script>
   </head>
   <body>
+    <div class="rocket-cursor" id="rocket-cursor" hidden aria-hidden="true">
+      <span class="rocket-flame" aria-hidden="true">
+        <i></i>
+        <i></i>
+        <i></i>
+      </span>
+      <svg class="rocket-body" viewBox="0 0 64 36" width="64" height="36">
+        <path d="M18 8 L10 2 L22 10 Z" fill="#6b4cff" />
+        <path d="M18 28 L10 34 L22 26 Z" fill="#7c5cff" />
+        <path d="M16 18 L28 8 H46 L58 18 L46 28 H28 Z" fill="#f7f4ef" />
+        <path d="M46 10 L62 18 L46 26 Z" fill="#e6a96f" />
+        <circle cx="38" cy="18" r="5.5" fill="#446a75" />
+        <circle cx="38" cy="18" r="3.2" fill="#8ddfd2" />
+      </svg>
+    </div>
     <div class="atmosphere" aria-hidden="true"></div>
     <div class="grain" aria-hidden="true"></div>
+    <img class="sky" src="assets/constellation.svg" alt="" aria-hidden="true" />
 
     <a class="skip" href="#premise">Skip to content</a>
 
     <header class="site-header">
-      <a class="wordmark" href="#top">
-        <img src="assets/icon.png" width="36" height="36" alt="" />
-        Waypoint
-      </a>
+      <a class="wordmark" href="#top"><span aria-hidden="true">✦</span> Waypoint</a>
       <nav class="site-nav" aria-label="Page">
         <a href="#premise">Premise</a>
-        <a href="#how">How it works</a>
-        <a href="#download">Download</a>
+        <a href="#copilot">Copilot</a>
+        <a href="#missions">Missions</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Desktop study coach</p>
-          <h1>Navigate school.<span>Lock in.</span></h1>
-          <p class="lede">
-            Waypoint keeps the hour you meant to study in one calm place. Ask for an
-            explanation, a quiz, or a plan. Then name the work — a coach watches the
-            screen and stays with you until the timer ends.
-          </p>
-          <div class="download-block" id="hero-downloads" data-downloads></div>
+      <section class="download-top" id="download" aria-label="Download">
+        <div class="download-top-copy">
+          <p class="kicker"><span aria-hidden="true">✦</span> Download</p>
+          <h2>Mac, Windows, and Linux.</h2>
         </div>
+        <div class="download-block" data-downloads></div>
+      </section>
 
-        <aside class="session-card" aria-hidden="true">
-          <div class="session-top">
-            <p class="session-brand">Waypoint</p>
-            <p class="session-chip">On task</p>
+      <section class="hero">
+        <div class="hero-card">
+          <p class="hero-eyebrow">A little structure. A whole new orbit.</p>
+          <h1>Big goals.<span>Small missions.</span></h1>
+          <p class="lede">
+            Find your focus with an AI copilot by your side. One task, one flight,
+            one step forward.
+          </p>
+          <p class="hero-foot">Your next chapter starts here <span aria-hidden="true">+</span></p>
+          <div class="hero-art" aria-hidden="true">
+            <img class="art-orbits" src="assets/orbits.svg" alt="" />
+            <img class="art-moon" src="assets/moon.svg" alt="" />
+            <img class="art-ship" src="assets/ship.svg" alt="" />
+            <img class="art-planet" src="assets/planet-ringed.svg" alt="" />
           </div>
-          <p class="session-timer">45:00</p>
-          <p class="session-goals">Calc PSet 3 · Q1–3 on my laptop</p>
-          <div class="coach-line">
-            <p class="coach-kicker">Waypoint</p>
-            <p>Stay with question 2. The notes are already open.</p>
-          </div>
-          <dl class="vitals">
-            <div>
-              <dt>Screen</dt>
-              <dd>Watching</dd>
-            </div>
-            <div>
-              <dt>Wellness</dt>
-              <dd>Steady</dd>
-            </div>
-          </dl>
-        </aside>
+        </div>
       </section>
 
       <section class="band" id="premise">
         <div class="band-intro">
-          <p class="eyebrow">The premise</p>
-          <h2>School logistics on one side. The work itself on the other.</h2>
+          <p class="eyebrow">Mission control</p>
+          <h2>A little focus goes a long way.</h2>
           <p>
-            Waypoint is for the student who already knows what they sat down to do.
-            Ask handles the question in front of you. Lock-in protects the next
-            block of time. Google Calendar and Drive can join the conversation when
-            you want deadlines and notes nearby — they are never required to start.
+            Pick one thing. Give it a little time. Waypoint keeps the next step,
+            the flight, and a copilot in one calm place — no streaks to protect,
+            and no leaderboard.
           </p>
         </div>
         <ol class="feature-grid">
-          <li>
+          <li id="copilot">
             <p class="feature-index">01</p>
-            <h3>Ask</h3>
+            <h3>Copilot</h3>
             <p>
-              Explain it simply, quiz yourself, or make a plan. Answers come back
-              with headings, tables, code, and math. Connect Google when Calendar
-              deadlines or Drive notes belong in the thread.
+              A sounding board for the work in front of you. Ask a question, talk
+              through a roadblock, or get ready to focus. Replies can include
+              headings, tables, code, and math. Signed-in Calendar deadlines and
+              Drive notes can join the thread.
             </p>
           </li>
-          <li>
+          <li id="missions">
             <p class="feature-index">02</p>
-            <h3>Lock in</h3>
+            <h3>Missions</h3>
             <p>
-              Set the minutes and the assignment. Waypoint checks the screen against
-              those goals and nudges you from an always-on-top coach line when you
-              drift.
+              Name one objective and choose 15, 25, 45, or 60 minutes. Launch, and
+              a flight path tracks the session while your copilot can speak a
+              gentle check-in. Finish to log the flight — your first one sets a
+              personal best.
             </p>
           </li>
           <li>
             <p class="feature-index">03</p>
-            <h3>A softer landing</h3>
+            <h3>Yours to turn on</h3>
             <p>
-              Optional camera checks read stress, heart rate, and breathing so the
-              coach can ease off. If the camera stays off, lock-in still runs.
+              Camera signals and screen sharing start off. Turn them on only if
+              you want a softer check-in or a look at the work on screen. Sessions
+              save events and summaries, not raw video, screenshots, or audio.
             </p>
           </li>
         </ol>
       </section>
 
-      <section class="band band-steps" id="how">
+      <section class="band" id="how">
         <div class="band-intro">
           <p class="eyebrow">How it feels</p>
-          <h2>Open it. Ask, or lock in.</h2>
+          <h2>Sign in. Ask, or launch.</h2>
         </div>
         <ol class="steps">
           <li>
-            <h3>Sign in</h3>
-            <p>Open Waypoint on your computer. No API-key screens, no config files.</p>
-          </li>
-          <li>
-            <h3>Ask</h3>
+            <h3>Sign in with Google</h3>
             <p>
-              Send a question, or use the study shortcuts. Link Google only if you
-              want Calendar and Drive in the chat.
+              Approve access in the browser, then come back. No API-key screens
+              and no config files.
             </p>
           </li>
           <li>
-            <h3>Lock in</h3>
+            <h3>Talk it through</h3>
             <p>
-              Name the work, start the timer, and let the coach watch the screen
-              until you are done.
+              Use Copilot when the next step is fuzzy, or dictate the objective
+              you want to finish.
+            </p>
+          </li>
+          <li>
+            <h3>Launch the mission</h3>
+            <p>
+              Start the flight, stay with that one task, and end when you are
+              done. Every flight counts.
             </p>
           </li>
         </ol>
       </section>
 
-      <section class="band band-download" id="download">
-        <div class="band-intro">
-          <p class="eyebrow">Download</p>
-          <h2>Mac, Windows, and Linux.</h2>
-          <p>
-            Installers are published with each GitHub release of Waypoint. Pick your
-            system below, or open the full release list.
-          </p>
-        </div>
-        <div class="download-block download-block-panel" data-downloads></div>
-      </section>
     </main>
 
     <footer class="site-footer">
-      <p>Waypoint · study navigation for the work you already named.</p>
-      <p>
-        <a href="https://github.com/legitminh/BigRedHacksProject">Source</a>
-        <a href="https://github.com/legitminh/BigRedHacksProject/releases">Releases</a>
+      <p class="privacy">
+        <strong>Privacy.</strong> We securely process your data and keep no logs of
+        screen or video recording.
       </p>
+      <div class="footer-meta">
+        <p>Waypoint · one task, one flight, one step forward.</p>
+        <p>
+          <a href="https://github.com/legitminh/BigRedHacksProject">Source</a>
+          <a href="https://github.com/legitminh/BigRedHacksProject/releases">Releases</a>
+        </p>
+      </div>
     </footer>
   </body>
 </html>
