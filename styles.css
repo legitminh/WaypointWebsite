@@ -564,11 +564,11 @@ h1 span {
 
 .rocket-body {
   position: absolute;
-  left: -94px;
-  top: -31px;
+  left: -93.66px;
+  top: -28.1px;
   display: block;
   width: 96px;
-  height: 56px;
+  height: 56.2px;
   overflow: visible;
   filter: drop-shadow(0 6px 10px rgba(42, 36, 64, 0.22));
 }

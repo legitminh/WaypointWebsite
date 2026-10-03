@@ -21,17 +21,41 @@
   </head>
   <body>
     <div class="rocket-cursor" id="rocket-cursor" hidden aria-hidden="true">
-      <svg class="rocket-body" viewBox="20 32 148 86">
-        <path class="rocket-exhaust" d="M63 66.9998C37 59.6664 26.3333 64.3331 31 80.9998C22.3333 94.3331 33 97.9998 63 91.9998V66.9998Z" fill="#F6BE70" />
-        <path class="rocket-exhaust" d="M62 73.9999C47.3333 73.3332 40.6667 75.9999 42 81.9999L62 85.9999V73.9999Z" fill="#FAE9BC" />
-        <path d="M77 60.0001L82 34.0001C92.6667 32.6668 102.667 41.6668 112 61.0001M77 94.0001L84 114C96.6667 114.667 107 106.667 115 90.0001" fill="#D99769" />
-        <path d="M60 67.0002C95.3333 49.0002 130.333 53.3336 165 80.0002C131.667 103.334 96.6667 108 60 94.0002V67.0002Z" fill="#EBEDE1" />
-        <path d="M61 86C95 94.6667 129.333 92.6667 164 80C130.667 102.667 96 107.333 60 94L61 86Z" fill="#A1C7BF" />
-        <path d="M141 64C151.667 68 159.667 73.3333 165 80L145 92L141 64Z" fill="#E6A96F" />
-        <path d="M111 93C120.389 93 128 85.8366 128 77C128 68.1634 120.389 61 111 61C101.611 61 94 68.1634 94 77C94 85.8366 101.611 93 111 93Z" fill="#446A75" />
-        <path d="M111 88C117.627 88 123 83.0751 123 77C123 70.9249 117.627 66 111 66C104.373 66 99 70.9249 99 77C99 83.0751 104.373 88 111 88Z" fill="#8DDFD2" />
-        <path d="M104 73L113 69" stroke="#F0F6D9" stroke-width="4" stroke-linecap="round" />
-        <path d="M62 69L60 93" stroke="#496B73" stroke-width="8" stroke-linecap="round" />
+      <svg class="rocket-body" viewBox="16 28 164 96">
+        <defs>
+          <linearGradient id="rocket-hull" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#F7F8EF" />
+            <stop offset="0.6" stop-color="#EBEDE1" />
+            <stop offset="1" stop-color="#D9DCCD" />
+          </linearGradient>
+          <linearGradient id="rocket-nose" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#F0B97E" />
+            <stop offset="1" stop-color="#D99769" />
+          </linearGradient>
+          <linearGradient id="rocket-flame" x1="1" y1="0" x2="0" y2="0">
+            <stop offset="0" stop-color="#F6BE70" />
+            <stop offset="1" stop-color="#F08A5D" />
+          </linearGradient>
+          <clipPath id="rocket-hull-clip">
+            <path d="M60 60C92 48 130 50 152 62C162 67 170 72 176 76C170 80 162 85 152 90C130 102 92 104 60 92Z" />
+          </clipPath>
+        </defs>
+        <path class="rocket-exhaust" d="M62 64C50 64 38 69 22 76C38 83 50 88 62 88Z" fill="url(#rocket-flame)" />
+        <path class="rocket-exhaust" d="M62 69.5C54 69.5 46 72.5 38 76C46 79.5 54 82.5 62 82.5Z" fill="#FAE9BC" />
+        <path d="M74 61L82 38Q85 32 92 33.5C102 36 112 45 122 57Z" fill="#D99769" />
+        <path d="M74 91L82 114Q85 120 92 118.5C102 116 112 107 122 95Z" fill="#C9845A" />
+        <path d="M60 60C92 48 130 50 152 62C162 67 170 72 176 76C170 80 162 85 152 90C130 102 92 104 60 92Z" fill="url(#rocket-hull)" />
+        <g clip-path="url(#rocket-hull-clip)">
+          <path d="M50 85C92 97 138 94 180 76L180 112L50 112Z" fill="#A1C7BF" />
+          <path d="M70 60C98 52 126 53 146 61" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.7" />
+          <path d="M146 46Q138 76 146 106L182 106L182 46Z" fill="url(#rocket-nose)" />
+          <path d="M146 46Q138 76 146 106" fill="none" stroke="#B9774F" stroke-width="2" opacity="0.6" />
+          <path d="M150 64C158 67 165 71 170 74.5" fill="none" stroke="#FFE2B8" stroke-width="2.2" stroke-linecap="round" opacity="0.8" />
+        </g>
+        <rect x="56" y="58" width="10" height="36" rx="4" fill="#496B73" />
+        <circle cx="120" cy="73" r="15.5" fill="#446A75" />
+        <circle cx="120" cy="73" r="11.5" fill="#8DDFD2" />
+        <path d="M113 70Q115 65.5 120.5 64.5" fill="none" stroke="#F0F6D9" stroke-width="3" stroke-linecap="round" />
       </svg>
     </div>
     <div class="atmosphere" aria-hidden="true"></div>
