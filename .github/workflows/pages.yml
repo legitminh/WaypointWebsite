@@ -29,8 +29,9 @@ jobs:
 
       - name: Assemble site
         run: |
-          mkdir -p _site/assets
+          mkdir -p _site/assets _site/privacy
           cp index.html styles.css releases.js cursor.js .nojekyll _site/
+          cp privacy/index.html _site/privacy/
           cp assets/* _site/assets/
 
       - name: Setup Pages

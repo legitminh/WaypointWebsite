@@ -22,18 +22,17 @@
   </head>
   <body>
     <div class="rocket-cursor" id="rocket-cursor" hidden aria-hidden="true">
-      <span class="rocket-flame" aria-hidden="true">
-        <i></i>
-        <i></i>
-        <i></i>
-      </span>
-      <svg class="rocket-body" viewBox="0 0 64 36" width="64" height="36">
-        <path d="M18 8 L10 2 L22 10 Z" fill="#6b4cff" />
-        <path d="M18 28 L10 34 L22 26 Z" fill="#7c5cff" />
-        <path d="M16 18 L28 8 H46 L58 18 L46 28 H28 Z" fill="#f7f4ef" />
-        <path d="M46 10 L62 18 L46 26 Z" fill="#e6a96f" />
-        <circle cx="38" cy="18" r="5.5" fill="#446a75" />
-        <circle cx="38" cy="18" r="3.2" fill="#8ddfd2" />
+      <svg class="rocket-body" viewBox="20 32 148 86">
+        <path class="rocket-exhaust" d="M63 66.9998C37 59.6664 26.3333 64.3331 31 80.9998C22.3333 94.3331 33 97.9998 63 91.9998V66.9998Z" fill="#F6BE70" />
+        <path class="rocket-exhaust" d="M62 73.9999C47.3333 73.3332 40.6667 75.9999 42 81.9999L62 85.9999V73.9999Z" fill="#FAE9BC" />
+        <path d="M77 60.0001L82 34.0001C92.6667 32.6668 102.667 41.6668 112 61.0001M77 94.0001L84 114C96.6667 114.667 107 106.667 115 90.0001" fill="#D99769" />
+        <path d="M60 67.0002C95.3333 49.0002 130.333 53.3336 165 80.0002C131.667 103.334 96.6667 108 60 94.0002V67.0002Z" fill="#EBEDE1" />
+        <path d="M61 86C95 94.6667 129.333 92.6667 164 80C130.667 102.667 96 107.333 60 94L61 86Z" fill="#A1C7BF" />
+        <path d="M141 64C151.667 68 159.667 73.3333 165 80L145 92L141 64Z" fill="#E6A96F" />
+        <path d="M111 93C120.389 93 128 85.8366 128 77C128 68.1634 120.389 61 111 61C101.611 61 94 68.1634 94 77C94 85.8366 101.611 93 111 93Z" fill="#446A75" />
+        <path d="M111 88C117.627 88 123 83.0751 123 77C123 70.9249 117.627 66 111 66C104.373 66 99 70.9249 99 77C99 83.0751 104.373 88 111 88Z" fill="#8DDFD2" />
+        <path d="M104 73L113 69" stroke="#F0F6D9" stroke-width="4" stroke-linecap="round" />
+        <path d="M62 69L60 93" stroke="#496B73" stroke-width="8" stroke-linecap="round" />
       </svg>
     </div>
     <div class="atmosphere" aria-hidden="true"></div>
@@ -157,6 +156,7 @@
       <p class="privacy">
         <strong>Privacy.</strong> We securely process your data and keep no logs of
         screen or video recording.
+        <a href="privacy/">Privacy statement</a>
       </p>
       <div class="footer-meta">
         <p>Waypoint · one task, one flight, one step forward.</p>
