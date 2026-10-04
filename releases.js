@@ -2,11 +2,7 @@ const REPO = "legitminh/BigRedHacksProject";
 const RELEASES_PAGE = `https://github.com/${REPO}/releases`;
 const LATEST_API = `https://api.github.com/repos/${REPO}/releases/latest`;
 
-const PLATFORMS = [
-  { id: "mac", label: "Mac" },
-  { id: "windows", label: "Windows" },
-  { id: "linux", label: "Linux" },
-];
+const PLATFORMS = [{ id: "mac", label: "Mac" }];
 
 function platformOf(name) {
   const file = name.toLowerCase();
@@ -18,15 +14,6 @@ function platformOf(name) {
     file.includes("macos")
   ) {
     return "mac";
-  }
-  if (file.endsWith(".exe") || file.endsWith(".msi")) return "windows";
-  if (
-    file.endsWith(".appimage") ||
-    file.endsWith(".deb") ||
-    file.endsWith(".rpm") ||
-    file.includes("linux")
-  ) {
-    return "linux";
   }
   return null;
 }
@@ -130,8 +117,8 @@ function render(release, error) {
         );
       }
       note.textContent = error
-        ? "Release list could not be loaded. Open GitHub releases for Mac, Windows, and Linux builds."
-        : "No release is published yet. Mac, Windows, and Linux installers will appear here with the first GitHub release.";
+        ? "Release list could not be loaded. Open GitHub releases for the Mac build."
+        : "No release is published yet. The Mac installer will appear here with the first GitHub release.";
       const fallback = document.createElement("a");
       fallback.href = RELEASES_PAGE;
       fallback.textContent = "Open releases";
